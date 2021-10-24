@@ -1,0 +1,30 @@
+<div class="admin-container">
+
+    <h1>Admin login</h1>
+
+    <?php if(!$formIsValid) :?>
+    <?php endif;?>
+
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="name">usersame</label>
+            <input value="<?php if(array_key_exists('name',$_SESSION)) :?> <?= $_SESSION['name'] ?> <?php endif;?>" class="<?php if(!$formIsValid):?> <?= 'invalid' ?> <?php endif;?> "type="text" name="name" id="name">
+
+            <?php if(!$formIsValid):?> 
+                <p class="warning">Username or password is invalid</p>   
+            <?php endif;?>
+        </div>
+
+        <div class="form-group">
+            <label for="password">password</label>
+            <input class="<?php if(!$formIsValid):?> <?= 'invalid' ?> <?php endif;?>"type="password" name="password" id="password">
+
+            <?php if(!$formIsValid):?> 
+                <p class="warning">Username or password is invalid</p>   
+            <?php endif;?>
+        </div>
+        <button type="submit" name="submitButton">logIn</button>
+    </form>
+
+    <?php unset($_SESSION['name']); ?>
+</div>

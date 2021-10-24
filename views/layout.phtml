@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vino</title>
+
+    <!-- Css link-->
+    <link rel="stylesheet" href = <?= Path::root() . "css/style.css" ?> >
+
+    <!-- font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+</head>
+<body class="sc5">
+    <!-- Nav bar -->
+
+        <?php if($_SERVER['REQUEST_URI'] != "/vino-mornag/checkout.php" || $_SERVER['REQUEST_URI'] != "/vino-mornag/adminPannel.php"):?>
+        <nav>
+
+            <div class="logo">
+                <a href="/vino-mornag/index.php"><img id="logo" src= <?= Path::imagePath() ."logoblack1.png" ?> alt="logo"></a>
+            </div>
+
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+
+            <ul class="header-shop">
+                <li><i class="far fa-user-circle"></i><span class="menu-title">Account</span></li>
+                <li id="cartBtn"><a href="/vino-mornag/controllers/cart/cart.php"><i class="fas fa-shopping-cart"></i></a><span class="menu-title">Cart</span></li>
+            </ul>
+
+            <div class="menu-nav">
+                <ul>
+                    <li><a href="/vino-mornag/index.php">Home</a></li>
+                    <li><a href= "controllers/products/products.php">shop</a></li>
+                    <li><a href="#">Reservation</a></li>
+                    <li><a href="#">Event</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="/vino-mornag/controllers/admin/adminLogin.php">Admin pannel</a></li>
+                </ul>
+            </div>
+           
+        </nav>
+        <?php endif; ?>
+
+    <main >
+        <?php require $template.".phtml"  ?>
+    </main>
+    
+    <?php if($_SERVER['REQUEST_URI'] != "/vino-mornag/checkout.php" || $_SERVER['REQUEST_URI'] != "/vino-mornag/adminPannel.php")   :?>
+    <footer>
+        <div class="footer-nav-wrapper">
+        <h3>Vino Mornag</h3>
+
+        <div class="footer-items">
+            <div class="main-items">
+                <h4>Tasting room</h4>
+                <p class="space-padding">22720 EL Camino Real</p>
+                <p class="space-padding">Santa Mornag, CA 93453</p>
+            </div>
+            <div class="main-items">
+                <h4>hours</h4>
+                <p class="space-padding">11 AM – 5:30 PM daily</p>
+                <p class="space-padding">Café Service</p>
+                <p class="space-padding">11 AM – 5:00 PM daily</p>
+            </div>
+            <div class="main-items">
+            <h4>Contact Us</h4>
+                <p class="space-padding">805.365.7045</p>
+                <p class="space-padding">ahmedbensaber@gmx.fr</p>
+            </div>
+
+            <ul class="social">
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul> 
+        </div>
+            
+        </div>
+
+        <div class="footer-nav">
+            <ul class="footer-nav-copyright">
+                <li>Copyright © 2021</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Use</li>
+                <li>Made by Ahmed ben saber</li>
+            </ul>
+        </div>
+    </footer>
+    <?php endif; ?>
+
+<!-- jquery cdn-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- basket class -->
+<script src= <?= Path::root() . 'js/classes/Basket.class.js'?>></script>
+
+<!-- orderform class js -->
+<script src= <?= Path::root() . 'js/classes/OrderForm.class.js'?>></script>
+
+<!-- modal class js -->
+<script src= <?= Path::root() . 'js/classes/Modal.class.js'?>></script>
+
+<!-- Edit modal class js-->
+<script src= <?= Path::root() . 'js/classes/EditProductModal.class.js'?>></script>
+
+<!-- Add modal class js-->
+<script src= <?= Path::root() . 'js/classes/AddProductModal.class.js'?>></script>
+
+<!-- Checkout modal class js-->
+<script src= <?= Path::root() .'js/classes/CheckoutModal.class.js'?>></script>
+
+<!-- Checkout modal class js-->
+<script src= <?= Path::root() . 'js/classes/OrderAdmin.class.js'?>></script>
+
+<!-- Search bar class js-->
+<script src= <?= Path::root() . 'js/classes/SearchBar.class.js'?>></script>
+
+
+<!-- javascript link-->
+<script src= <?= Path::root() . "js/main.js"?> defer></script>
+
+</body>
+</html>

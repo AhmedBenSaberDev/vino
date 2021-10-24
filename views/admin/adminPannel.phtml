@@ -1,0 +1,61 @@
+<div class="admin-pannel">
+
+    <h1>Admin pannel</h1>
+
+    <?php if (array_key_exists("success", $_SESSION)) : ?>
+        <div class="success">
+            <p><?= $_SESSION['success'] ?></p>
+        </div>
+    <?php endif; ?>
+    <?php unset($_SESSION['success']) ?>
+    
+    <?php require "adminNavLayout.phtml"?>
+
+    <div id="admin-content">
+
+    <h2 class="product-list-admin">Product list</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th style="width:50%;">Picture</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <?php foreach ($products as $product) : ?>
+                    <tr>
+
+                        <td><?= $product['ProductName'] ?></td>
+                        <td><img style="width:50%;object-fit:contain;" src="<?= Path::imagePath() . "products/" . $product['Picture'] ?>" alt="product"></td>
+                        <td><?= $product['Price'] . " $" ?></td>
+
+                        <form action="../../ajax/product/deleteProduct.php" method="POST">
+
+                            <input name="productId" type="hidden" value="<?= $product['Id'] ?>">
+                            <input name="productName" type="hidden" value="<?= $product['ProductName'] ?>">
+                            <td><button name="deleteProduct" type="submit" style="border:none;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </form>
+                        <td><button class="editProduct" data-id="<?= $product['Id'] ?>" name="editProduct" style="border:none;"><i class="far fa-edit"></i></button></td>
+
+                    </tr>
+                <?php endforeach; ?>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="edit-modal-wrapper hide">
+    </div>
+        <div class="edit-product-modal hide sc5">
+
+    
+    </div>
+    <?php require "adminModals.phtml"?>
+
+
+
+</div>

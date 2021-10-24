@@ -1,0 +1,35 @@
+<div class="commandes-container">
+
+
+<?php if(!empty($orders)):?>
+<table class="orders">
+    <thead>
+        <tr>
+            <th>Order number</th>
+            <th>Ordered at</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($orders as $order) :?>
+        <tr>
+            <td>Order N°: <?= $order['id'] ?> <button data-id="<?= $order['id']?>" class="order-details-button">View Details</button></td>
+            <td><?= $order['created_at']?></td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<?php else:?>
+
+    <h2 class="order-message">No orders yet</h2>
+
+<?php endif;?>
+<table class="orders-details">
+
+
+</table>
+
+
+
+
+
+</div>

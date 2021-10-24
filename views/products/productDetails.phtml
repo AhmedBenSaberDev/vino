@@ -1,0 +1,43 @@
+<div class="hero-product-details">
+
+</div>
+
+
+    <div class="cart-modal hide">
+        <i id="modal-btn" class="far fa-times-circle"></i>
+        <div class="success-message">
+            <p>item WAS successfully added to your cart</p>
+        </div>
+        <div id="modal-image-container">
+            <img id="product-name-image" src="img/products/OYSTER_RIDGE_MAGNUM.jpg" alt="">
+        </div>
+        <p id='product-name-modal'>this is the name</p>
+        <p class="label-modal-quantity">Qty : <span id="quantity-modal">10</span></p>
+        <p id='product-modal-price'>50<span> $</span></p>
+        <div class="hr-div"></div>
+        <p class="label-total-modal">Subtotal :<span id="total-price-modal">400 <strong>$</strong></span></p>
+        <a class="check-cart-btn" href = "/vino-mornag/controllers/cart/cart.php"  >view cart</a>
+    </div>
+
+
+<div class="product-details-container">
+
+    <div class="product-details-img">
+        <img id='product-picture' src="<?= Path::imagePath() . "products/" . $product['Picture'] ?>" alt="">
+    </div>
+
+    <div class="product-details-content">
+        <span id="product-year" class="year"><?= $product["year"] ?></span>
+        <h1 id="product-name"><?= $product["ProductName"] ?></h1>
+        <span id="product-price" class="price"><?= $product["Price"] ?> $</span>
+
+        <form action="#">
+            <label for="product-quantity">Quantity :</label>
+            <input id="product-quantity" type="number" value = 1 min = 1 max="100">
+            <button type="submit" id="addCart" data-id="<?= $product["Id"] ?>">Add to cart</button>
+        </form>
+
+        <p id="product-description" class="description"><?= $product["ProductDescription"] ?> </p>
+    </div>
+
+</div>

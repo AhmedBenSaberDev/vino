@@ -1,0 +1,35 @@
+
+<div class="add-product-modal hide sc5">
+        <div style="text-align:end;">
+            <button id="closeAdd" style="border:none;background:none;"><i class="far fa-window-close"></i></button>
+        </div>
+
+        <form id="add-product-form" class="add-product" enctype="multipart/form-data" action="../../ajax//product/addProduct.php" method="POST">
+            <div class="form-control">
+                <label for="productName">Product name </label>
+                <input required name="productName" type="text" id="productName">
+                <p id='name-warning' class="hide warning">Product name is invalid</p>
+            </div>
+            <div class="form-control">
+                <label for="price">Price </label>
+                <input required name="price" type="number" id="price">
+                <p id='price-warning' class="hide warning">Price is invalid</p>
+            </div>
+            <div class="form-control">
+                <label for="year">Year </label>
+                <input required name="year" type="number" id="year">
+                <p id='year-warning' class="hide warning">Year is invalid</p>
+            </div>
+            <div class="form-control">
+                <label for="image">Image</label>
+                <input name="image" id="image" type="file"  accept="image/png, image/jpeg">
+            </div>
+            <div class="form-control">
+                <label for="description">Description :</label>
+                <textarea required name="description" id="description" cols="70" rows="10"></textarea>
+                <p id='description-warning' class="hide warning">Description must not be empty</p>
+            </div>
+
+            <button id="add-product-modal" class="add-btn" type="submit" name="addProduct">Add</button>
+        </form>
+    </div>
