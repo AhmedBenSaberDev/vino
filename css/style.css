@@ -1728,5 +1728,148 @@ tr{
     }
 } 
 
+@media (max-width: 767px) {
+    .footer-nav-wrapper {
+        padding: 30px 15px;
+    }
+
+    .footer-items .main-items {
+        padding: 0 15px;
+        width: 50%;
+    }
+
+    div.footer-items {
+        flex-wrap: wrap;
+    }
+
+    div.footer-nav {
+        padding: 20px 15px;
+    }
+
+    ul.footer-nav-copyright {
+        flex-wrap: wrap;
+    }
+
+    footer h3 {
+        font-size: 24px;
+    }
+
+    .footer-items h4 {
+        font-size: 16px;
+    }
+
+    p.space-padding {
+        font-size: 12px;
+        padding-bottom: 0;
+    }
+
+    .admin-container h1 {
+        font-size: 40px;
+    }
+
+    .admin-container label {
+        font-size: 14px;
+    }
+
+    ul.header-shop {
+        right: 20%;
+    }
+
+    div.product-container {
+        width: 100%;
+    }
+
+    div.product {
+        max-width: 100%;
+        flex-basis: 100%;
+        margin: 15px;
+    }
+
+    div.range-slider {
+        margin-top: 30px;
+    }
+
+
+    div.search-bar {
+        top: 0;
+        padding: 0 15px;
+        margin-bottom: 16px;
+    }
+
+    div.search-bar-container {
+        width: 100%;
+        bottom: unset;
+    }
+
+    div.logo {
+        width: 100%;
+        left: 10px;
+    }
+
+    div.hero-products {
+        border: none;
+        margin-bottom: 16px;
+    }
+
+    div.land-content {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    div.home-shop {
+        width: 100%;
+        padding: 50px 15px;
+    }
+
+    div.home-intro {
+        width: 100%;
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+
+    .visit.slide-up.transform {
+        width: 100%;
+    }
+
+    div.visit-wrapper {
+        padding: 40px 15px;
+    }
+
+    .visit-img.slide-up.transform {
+        width: 100%;
+        min-height: 450px;
+    }
+
+    ul.social {
+        margin-left: 10px;
+    }
+
+    div.hero-video {
+        top: 0;
+    }
+
+    .hero-title span {
+        width: 100%;
+        text-align: center;
+        top: 210px;
+    }
+
+    .hero-title h1 {
+        width: 100%;
+        text-align: center;
+        top: 360px;
+    }
+
+    span#winery {
+        width: 100%;
+        text-align: center;
+        top: 480px;
+    }
+
+    .menu-nav a {
+        font-size: 40px;
+    }
+
+}
 
   

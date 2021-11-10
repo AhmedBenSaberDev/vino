@@ -13,6 +13,9 @@ if(isset($_POST['payment']))
 
     $orderModel = new OrderModel(); 
     $orderModel->add($userName,$orderDetails,$email);
+
+
+    die('oik');
 }
 
 

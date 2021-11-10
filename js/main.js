@@ -27,7 +27,7 @@ if(menuBtn)
                 title.classList.toggle('span-color');
             })
 
-            userLogo.classList.toggle('shop-color');
+           
             shoppingCart.classList.toggle('shop-color');
     
             logo.setAttribute('src',logoPath + 'logoblanc1.png')
@@ -49,7 +49,7 @@ if(menuBtn)
                 title.classList.toggle('span-color');
             })
 
-            userLogo.classList.toggle('shop-color');
+            
             shoppingCart.classList.toggle('shop-color');
             
             logo.setAttribute('src', logoPath + 'logoblack1.png')
